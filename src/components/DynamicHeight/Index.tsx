@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./styles.css";
 
 export default function Example() {
@@ -9,7 +9,7 @@ export default function Example() {
 
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         const rect = entry.target.getBoundingClientRect();
 
         setHeight(rect.height);
